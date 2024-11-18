@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUDMFCA Mobile Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgreen;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .header, .footer {
+            text-align: center;
+            padding: 10px;
+            color: yellow;
+            background-color: purple;
+        }
+        .header h1 {
+            font-size: 24px;
+            animation: marquee 20s linear infinite;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: blue;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+        }
+        .nav-bar button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+        }
+        .section.active {
+            display: block;
+        }
+        .image-box {
+            border: 2px solid blue;
+            overflow: hidden;
+            position: relative;
+            height: 200px;
+            text-align: center;
+        }
+        .welcome-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .footer {
+            background-color: green;
+            color: white;
+        }
+        .content-box {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>KINGDOM UNITED DESTINY MINISTERIAL FELLOWSHIP OF CHURCHES</h1>
+    <div><img src="ukdmf logo.jpg" alt="KUDMFCA Logo" style="width: 80px; margin-top: 20px;"></div>
+    <p>Ministry of Reconciliation</p>
+</div>
+
+<div class="nav-bar">
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('about')">About Us</button>
+    <button onclick="showSection('services')">Our Services</button>
+    <button onclick="showSection('leadership')">Leadership</button>
+    <button onclick="showSection('contact')">Contact</button>
+</div>
+
+<!-- Home Page -->
+<div id="home" class="section active">
+      <h3>Events </h3>
+    <div class="image-box">
+        <img src="ukdmf logo.jpg" alt="Image 1" style="width: 50%; height: 100%;">
+       
+        <p>Our Logo, International Prelate, President, Chairman, Deputy Chairperson, Nairobi Director</p>
+    </div>
+    <div class="welcome-box">
+        <h2>Welcome to KUDMFCA</h2>
+        <p>Our organization aims to bring together clergy and provide a platform for support, unity, and growth. Join us in our mission to empower and uplift communities through faith.</p>
+        <p>Kingdom United Destiny Ministerial Fellowship of Churches Association (KUDMFCA)
+            We are a global network having branches all over, in kenya we have branches in all the 47 county, headed by the county directors</p>
+    </div>
+</div>
+
+<!-- About Us Page -->
+<div id="about" class="section">
+    <div class="content-box" style="background-color: #ffddc1;">
+        <h3>Mission</h3>
+        <p>Our mission at the Kingdom United Destiny Ministerial Fellowship of Churches Association (KUDMFCA) 
+            is to unite pastors and churches under a common purpose of advancing the Kingdom of God through
+            collaboration, support, and spiritual growth. We are dedicated to empowering clergy, fostering unity 
+            within the body of Christ, and providing resources and guidance to ensure that our members are 
+            equipped to lead their congregations effectively. By promoting mutual respect, shared vision, 
+            and collective action, we aim to build a strong and vibrant network of Christian leaders who are 
+            committed to transforming lives and communities for the glory of God.</p>
+    </div>
+    <div class="content-box" style="background-color: #ffe4e1;">
+        <h3>Vision</h3>
+        <p>Our vision is to see a unified and empowered community of Christian leaders who, through collaboration 
+            and shared purpose, bring about spiritual renewal and positive change in their congregations and 
+            communities. We envision a fellowship where pastors and churches work together in harmony, 
+            reflecting the love and unity of Christ, and where each member is fully equipped to fulfill their God-given 
+            calling. Through our efforts, we strive to create a lasting impact on the world, advancing the Kingdom of 
+            God and glorifying His name in all that we do.</p>
+    </div>
+    <div class="content-box" style="background-color: #e0ffff;">
+        <h3>Core Values</h3>
+        <ul>
+            <li>Integrity</li>
+            <li>Unity</li>
+            <li>Empowerment</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Our Services Page -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+        .nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .nav a:hover {
+            background-color: #575757;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+        }
+        /* Page Specific Styles */
+        .sacco { background-color: #f0f8ff; }
+        .goshen { background-color: #f8f0ff; }
+        .online-tv { background-color: #f9f9f9; }
+
+        /* Spinning Logo Animation */
+        .spinning-logo {
+            animation: spin 3s linear infinite;
+            width: 150px;
+            height: 150px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content-container img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+        }
+        .content-container .text {
+            width: 60%;
+        }
+        .button-link {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button-link:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <div class="nav">
+        <a href="#" onclick="showSection('sacco')">Kudmfca Sacco</a>
+        <a href="#" onclick="showSection('goshen')">Goshen Theology School</a>
+        <a href="#" onclick="showSection('online-tv')">Kudmfca Online TV</a>
+    </div>
+
+    <!-- Our Kudmfca Sacco Page -->
+    <div id="sacco" class="section sacco">
+        <div class="content-container">
+            <div class="text">
+                <h2>Kudmfca Sacco</h2>
+                <p>Join our Sacco to experience financial empowerment and community development.</p>
+                <p>evey clergy , church leader who joins our sacco will benefit with our service including the  welfare and last respect plan .</p>=
+                <a href="https://forms.gle/x6eDp7KEubC3VFhS8" class="button-link">Join Sacco</a>
+            </div>
+            <div>
+                <img src="ukdmf logo.jpg" alt="Kudmfca Sacco Logo" class="spinning-logo">
+            </div>
+        </div>
+        <div class="content-container">
+            <div>
+                <img src="logo" alt="Sacco Advert">
+            </div>
+        </div>
+    </div>
+
+    <!-- Goshen Theology School Page -->
+    <div id="goshen" class="section goshen">
+        <div class="content-container">
+            <div class="text">
+                <h2>Welcome to Goshen Theology School</h2>
+                <p>Our theology school offers a deep spiritual education. Prepare to spread the word of God.</p>
+                <p>in this we are offering.</p>
+                <p>ceerificate.</p>
+                <p>Diploma.</p>
+                <p>Degree>
+                <p>Masters.</p>
+                <p>Doctorate.</p>
+
+                <a href="https://forms.gle/x6eDp7KEubC3VFhS8" class="button-link">Join Goshen School</a>
+            </div>
+            <div>
+                <img src="ukdmf logo.jpg" alt="Goshen Theology School Logo">
+            </div>
+        </div>
+        <div class="content-container">
+            <div>
+                <img src="ukdmf logo.jpg" alt="Goshen School Advert">
+            </div>
+        </div>
+    </div>
+
+    <!-- Kudmfca Online TV Page -->
+    <div id="online-tv" class="section online-tv">
+        <div class="content-container">
+            <div class="text">
+                <h2>Welcome to Kudmfca Online TV</h2>
+                <p>We air the preaching and events of our Members and churches across all our social media platforms.</p>
+            </div>
+            <div>
+                <img src="ukdmf logo.jpg" alt="Kudmfca TV Logo">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- National Leadership Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+        .nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .nav a:hover {
+            background-color: #575757;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+        }
+        .table-container {
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        /* Specific colors for National Leadership */
+        .national-leadership tr:nth-child(1) td { background-color: #d9f7be; }
+        .national-leadership tr:nth-child(2) td { background-color: #f0e68c; }
+        .national-leadership tr:nth-child(3) td { background-color: #ffcccb; }
+        .national-leadership tr:nth-child(4) td { background-color: #add8e6; }
+        .national-leadership tr:nth-child(5) td { background-color: #90ee90; }
+        .national-leadership tr:nth-child(6) td { background-color: #ffb6c1; }
+        /* County Background Colors */
+        .county-nairobi { background-color: #d9edf7; }
+        .county-kiambu { background-color: #fcf8e3; }
+        .county-Nyeri { background-color: #35eda3; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <div class="nav">
+        <a href="#" onclick="showSection('national-leadership')">National Leadership</a>
+        <a href="#" onclick="showSection('county-level')">County Level</a>
+    </div>
+
+    <!-- National Leadership Section -->
+    <div id="national-leadership" class="section">
+        <div class="table-container national-leadership">
+            <h2>National Leadership</h2>
+            <table>
+                <tr>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <td><img src="prelate .jpg" alt="Dr. Renee" style="width: 150px; height: 150px;"></td>
+                    <td>International Prelate</td>
+                    <td>Dr. Renee</td>
+                </tr>
+                <tr>
+                    <td><img src="president .jpg" alt="Dr. PK Mburu" style="width: 150px; height: 150px;"></td>
+                    <td>National Prelate</td>
+                    <td>Dr. PK Mburu</td>
+                </tr>
+                <tr>
+                    <td><img src="chairman photo.jpg" alt="Apostle Benson" style="width: 150px; height: 150px;"></td>
+                    <td>Chairperson</td>
+                    <td>Apostle Benson</td>
+                </tr>
+                <tr>
+                    <td><img src="images/job_alusula.jpg" alt="Job Alusula" style="width: 150px; height: 150px;"></td>
+                    <td>Treasurer</td>
+                    <td>Job Alusula</td>
+                </tr>
+                <tr>
+                    <td><img src="images/iraean.jpg" alt="Iraean" style="width: 150px; height: 150px;"></td>
+                    <td>Secretary</td>
+                    <td>Iraean</td>
+                </tr>
+                <tr>
+                    <td><img src="images/bishop_maina.jpg" alt="Bishop Maina" style="width: 150px; height: 150px;"></td>
+                    <td>Deputy CEO</td>
+                    <td>Bishop Maina</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- County Level Section -->
+    <div id="county-level" class="section">
+        <!-- Nairobi -->
+        <div class="table-container county-nairobi">
+            <h2>County Leadership - Nairobi</h2>
+            <table>
+                <tr>
+                    <th>County</th>
+                    <th>Name</th>
+                    <th>Join Us</th>
+                </tr>
+                <tr>
+                    <td>Nairobi</td>
+                    <td>Rev. John Kamau</td>
+                    <td><a href="https://forms.gle/x6eDp7KEubC3VFhS8" target="_blank">Join Us </a><a href="#"></a></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Kiambu -->
+        <div class="table-container county-kiambu">
+            <h2>County Leadership - Kiambu</h2>
+            <table>
+                <tr>
+                    <th>County</th>
+                    <th>Name</th>
+                    <th>Join Us</th>
+                </tr>
+                <tr>
+                    <td>Kiambu</td>
+                    <td>Bishop Maina</td>
+                    <td><a href="https://forms.gle/x6eDp7KEubC3VFhS8" target="_blank">Join Us </a><a href="#"></a></td>
+                </tr>
+                <tr>
+                    <td>Nyeri</td>
+                    <td>Bishop Maina</td>
+                    <td><a href="https://forms.gle/x6eDp7KEubC3VFhS8" target="_blank">Join Us </a><a href="#"></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- Contact Page -->
+<div id="contact" class="section">
+    <h3>Contact Us</h3>
+    <p>Location: Information House Room 519, Nairobi,  Kenya</p>
+    <p>Email: <a href="mailto:kdmfassociation@gmail.com">kdmfassociation@gmail.com</a></p>
+    <p>Phone: 0742 033 825</p>
+    <p>Phone: 0799 966 949</p>
+    <p>All rights reserved.</p>
+    <p><a href="https://forms.gle/x6eDp7KEubC3VFhS8" target="_blank">Join Us</a></p>
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 KUDMFCA. All Rights Reserved.</p>
+    <p><a href="https://forms.gle/x6eDp7KEubC3VFhS8" target="_blank" style="color: yellow; font-weight: bold;">Join Us</a></p>
+  </footer>
+
+</body>
+</html>
+
+</div>
+
+<script>
+    function showSection(sectionId) {
+        document.querySelectorAll('.section').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
